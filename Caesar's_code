@@ -1,0 +1,6 @@
+text = input('请输入密文（大写无空格）：')
+key = input('密钥：')
+t_arr = list(text)
+for i in t_arr:
+    cipher = (ord(i)-65+ int(key))%26
+    print(chr(cipher+65),end = '')
