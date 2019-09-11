@@ -1,0 +1,11 @@
+text = input('请输入密文（大写无空格）：')
+key = input('密钥(非空)：')
+n = len(key)
+key = key.upper()
+t_arr = list(text)
+k_arr = list(key)
+te = 0
+for i in t_arr:
+    cipher = (ord(i) + ord(k_arr[te%n]) - 130)%26
+    te += 1
+    print(chr(cipher+65),end = '')
